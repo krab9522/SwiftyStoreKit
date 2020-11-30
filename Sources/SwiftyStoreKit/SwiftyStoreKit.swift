@@ -308,13 +308,7 @@ extension SwiftyStoreKit {
         
         return InAppReceipt.getDistinctPurchaseIds(ofType: type, inReceipt: receipt)
     }
-    
-    public class func showPresentCodeRedemptionSheet() {
-        if #available(iOSApplicationExtension 14.0, *) {
-            sharedInstance.skPaymentQueue.presentCodeRedemptionSheet()
-        }
-    }
-    
+        
     public class var paymentQueue: SKPaymentQueue {
         sharedInstance.skPaymentQueue
     }
